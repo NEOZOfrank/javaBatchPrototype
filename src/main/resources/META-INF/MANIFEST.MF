@@ -1,0 +1,3 @@
+Example-Version: 1.0-SNAPSHOT
+Example-Revision: 1
+Example-Date: 9-Jan-2014

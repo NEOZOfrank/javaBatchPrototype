@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:batch="http://www.springframework.org/schema/batch"
+             xsi:schemaLocation="http://www.springframework.org/schema/batch
+                http://www.springframework.org/schema/batch/spring-batch.xsd
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- Batch Job Definition -->
+
+    <batch:job id="mailCollectorJob">
+        <batch:step id="readWrite">
+            <batch:tasklet>
+                <batch:chunk
+                    reader="mailItemReader"
+                    processor="mailItemProcessor"
+                    writer="mailItemWriter"
+                    commit-interval="100"/>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <!-- Reader -->
+
+    <bean id="mailItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+
+    </bean>
+
+    <!-- Processor -->
+
+    <bean id="mailItemProcessor" class="com.javabatch.prototype.MailCollector">
+
+    </bean>
+
+    <!-- Writer -->
+
+    <bean id="mailItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
+
+    </bean>
+
+</beans>
+

@@ -7,18 +7,17 @@
                 http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mail" class="com.javabatch.prototype.Mail"/>
 
     <!-- Batch Job Definition -->
 
-    <batch:job id="mailCollectorJob">
+    <batch:job id="mailSplitByDepartmentJob">
         <batch:step id="readWrite">
             <batch:tasklet>
                 <batch:chunk
                     reader="mailItemReader"
                     processor="mailItemProcessor"
                     writer="mailItemWriter"
-                    commit-interval="100"/>
+                    commit-interval="2"/>
             </batch:tasklet>
         </batch:step>
     </batch:job>
@@ -27,11 +26,13 @@
 
     <bean id="mailItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
         <property name="resource" value="/com/javabatch/prototype/mails-bare.csv" />
+        <property name="encoding" value="UTF-8"/>
 
         <property name="lineMapper">
             <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
                 <property name="lineTokenizer">
                     <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="delimiter" value="," />
                         <property name="names" value="senderName, senderMail, recipientMail, subject, body" />
                     </bean>
                 </property>
@@ -51,11 +52,13 @@
     <!-- Writer -->
 
     <bean id="mailItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
-        <property name="resource" value="/com/javabatch/prototype/mails-noduplicates.csv" />
+        <property name="encoding" value="UTF-8"/>
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/mails-noduplicates.csv" />
+        <property name="shouldDeleteIfExists" value="true"/>
         <property name="appendAllowed" value="true" />
         <property name="lineAggregator">
             <bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
-                <property name="delimiter" value="," />
+                <property name="delimiter" value=", " />
                 <property name="fieldExtractor">
                     <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
                         <property name="names" value="senderName, senderMail, recipientMail, subject, body" />

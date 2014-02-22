@@ -9,7 +9,7 @@ public class Mail {
     private String senderMail;
     private String recipientMail;
     private String subject;
-    private String bod;
+    private String body;
 
     public String getSenderName() {
         return senderName;
@@ -43,12 +43,12 @@ public class Mail {
         this.subject = subject;
     }
 
-    public String getBod() {
-        return bod;
+    public String getBody() {
+        return body;
     }
 
-    public void setBod(String bod) {
-        this.bod = bod;
+    public void setBody(String body) {
+        this.body = body;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class Mail {
                 ", senderMail='" + senderMail + '\'' +
                 ", recipientMail='" + recipientMail + '\'' +
                 ", subject='" + subject + '\'' +
-                ", bod='" + bod + '\'' +
+                ", body='" + body + '\'' +
                 '}';
     }
 }

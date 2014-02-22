@@ -4,8 +4,17 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans
                                  http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- infrastructure common componentes -->
+
     <import resource="spring-batch-infrastructure.xml"/>
-    <import resource="spring-batch-simplejob.xml"/>
+
+    <!-- JOB 1 -->
+
+    <import resource="spring-batch-noduplicatesjob.xml"/>
+
+    <!-- JOB 2 -->
+
+    <!--import resource="spring-batch-splitbydepartmentjob.xml"/-->
 
 </beans>
 

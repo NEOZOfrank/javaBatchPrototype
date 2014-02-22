@@ -24,7 +24,7 @@ public class MailCollectorTest {
     @Test
     public void startJob(){
         JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-        Job job = (Job) context.getBean("mailCollectorJob");
+        Job job = (Job) context.getBean("mailNoDuplicateJob");
 
         try {
 

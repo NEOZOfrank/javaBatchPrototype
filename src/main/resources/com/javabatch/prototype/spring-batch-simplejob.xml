@@ -7,6 +7,7 @@
                 http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="mail" class="com.javabatch.prototype.Mail"/>
 
     <!-- Batch Job Definition -->
 
@@ -25,19 +26,43 @@
     <!-- Reader -->
 
     <bean id="mailItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+        <property name="resource" value="/com/javabatch/prototype/mails-bare.csv" />
 
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="names" value="senderName, senderMail, recipientMail, subject, body" />
+                    </bean>
+                </property>
+                <property name="fieldSetMapper">
+                   <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+                       <property name="prototypeBeanName" value="mail" />
+                   </bean>
+                </property>
+            </bean>
+        </property>
     </bean>
 
     <!-- Processor -->
 
-    <bean id="mailItemProcessor" class="com.javabatch.prototype.MailCollector">
-
-    </bean>
+    <bean id="mailItemProcessor" class="com.javabatch.prototype.MailCollector"/>
 
     <!-- Writer -->
 
     <bean id="mailItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
-
+        <property name="resource" value="/com/javabatch/prototype/mails-noduplicates.csv" />
+        <property name="appendAllowed" value="true" />
+        <property name="lineAggregator">
+            <bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+                <property name="delimiter" value="," />
+                <property name="fieldExtractor">
+                    <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+                        <property name="names" value="senderName, senderMail, recipientMail, subject, body" />
+                    </bean>
+                </property>
+            </bean>
+        </property>
     </bean>
 
 </beans>

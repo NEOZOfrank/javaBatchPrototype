@@ -1,4 +1,4 @@
-package com.javabatch.prototype;
+package com.javabatch.prototype.duplicates;
 
 /**
  * Author: Frank Hinkel

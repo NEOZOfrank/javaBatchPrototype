@@ -7,8 +7,6 @@
                 http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mail" class="com.javabatch.prototype.Mail"/>
-
     <!-- Batch Job Definition -->
 
     <batch:job id="mailNoDuplicateJob">
@@ -22,7 +20,7 @@
                     skip-limit="1000">
 
                     <batch:skippable-exception-classes>
-                        <batch:include class="com.javabatch.prototype.DuplicateMailException"/>
+                        <batch:include class="com.javabatch.prototype.duplicates.DuplicateMailException"/>
                     </batch:skippable-exception-classes>
 
                  </batch:chunk>
@@ -34,7 +32,7 @@
 
     <bean id="mailItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
         <property name="encoding" value="UTF-8"/>
-        <property name="resource" value="/com/javabatch/prototype/mails-bare.csv" />
+        <property name="resource" value="/com/javabatch/prototype/duplicates/mails-bare.csv" />
 
         <property name="lineMapper">
             <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
@@ -55,13 +53,13 @@
 
     <!-- Processor -->
 
-    <bean id="mailItemProcessor" class="com.javabatch.prototype.MailCollector"/>
+    <bean id="mailItemProcessor" class="com.javabatch.prototype.duplicates.MailCollector"/>
 
     <!-- Writer -->
 
     <bean id="mailItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
         <property name="encoding" value="UTF-8"/>
-        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/mails-noduplicates.csv" />
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/split/mails-noduplicates.csv" />
         <property name="shouldDeleteIfExists" value="true"/>
         <property name="appendAllowed" value="true" />
         <property name="lineAggregator">

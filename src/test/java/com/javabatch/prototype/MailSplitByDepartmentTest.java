@@ -14,9 +14,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 /**
  * Author: Frank Hinkel
  */
-@ContextConfiguration("classpath:/com/javabatch/prototype/spring-batch-context.xml")
+@ContextConfiguration("MailSplitByDepartmentTest-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
-public class MailCollectorTest {
+public class MailSplitByDepartmentTest {
 
     @Autowired
     ApplicationContext context;
@@ -24,7 +24,7 @@ public class MailCollectorTest {
     @Test
     public void startJob(){
         JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-        Job job = (Job) context.getBean("mailNoDuplicateJob");
+        Job job = (Job) context.getBean("mailSplitByDepartmentJob");
 
         try {
 

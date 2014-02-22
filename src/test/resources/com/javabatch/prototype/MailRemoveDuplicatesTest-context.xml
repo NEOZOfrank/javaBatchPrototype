@@ -4,7 +4,7 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans
                                  http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- infrastructure common components -->
+    <!-- infrastructure common componentes -->
 
     <import resource="spring-batch-infrastructure.xml"/>
 
@@ -12,14 +12,9 @@
 
     <import resource="spring-batch-common.xml"/>
 
-    <!-- JOB 1 -->
+    <!-- JOB -->
 
     <import resource="spring-batch-noduplicatesjob.xml"/>
-
-    <!-- JOB 2 -->
-
-    <bean id="mail" class="com.javabatch.prototype.common.Mail"/>
-
 
 </beans>
 

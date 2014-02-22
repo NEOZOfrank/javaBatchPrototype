@@ -7,7 +7,7 @@ Java Batch Prototype
 - Spring Batch
 - Spring Integration
 
-**Test-Depdencies:**
+**Test-Dependencies:**
 
 - JUnit
 - Mockito

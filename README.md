@@ -1,12 +1,13 @@
 Java Batch Prototype
+==============
 
-Dependencies:
+**Dependencies:**
 
-Spring Core
-Spring Batch
-Spring Integration
+- Spring Core
+- Spring Batch
+- Spring Integration
 
-Test-Depdencies:
+**Test-Depdencies:**
 
-JUnit
-Mockito
+- JUnit
+- Mockito

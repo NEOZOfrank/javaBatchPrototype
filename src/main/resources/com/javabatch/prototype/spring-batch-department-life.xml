@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns:batch="http://www.springframework.org/schema/batch"
+     xmlns:int-http="http://www.springframework.org/schema/integration/http"
+     xmlns:int="http://www.springframework.org/schema/integration"
+     xsi:schemaLocation="http://www.springframework.org/schema/batch
+        http://www.springframework.org/schema/batch/spring-batch.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/integration/http
+		http://www.springframework.org/schema/integration/http/spring-integration-http.xsd
+        http://www.springframework.org/schema/integration
+        http://www.springframework.org/schema/integration/spring-integration.xsd
+        ">
+
+
+    <!-- Spring Integration HTTP Outbound -->
+
+    <int:channel id="workflowLifeChannelRequest"/>
+    <int:channel id="workflowLifeChannelResponse">
+
+    </int:channel>
+
+    <int-http:outbound-gateway id="workflowGateway"
+                               request-channel="workflowLifeChannelRequest"
+                               url="http://localhost:3000/startWorkflow"
+                               http-method="POST"
+                               message-converters="messageConverter"
+                               extract-request-payload="false"
+                               charset="UTF-8"
+                               reply-timeout="3000"
+                               reply-channel="workflowLifeChannelResponse"/>
+
+    <int:service-activator input-channel="workflowLifeChannelResponse"
+                       ref="workflowLifeResponseLogger" method="log"/>
+
+
+    <bean id="messageConverter" class="org.springframework.integration.http.converter.SerializingHttpMessageConverter"/>
+    <bean id="workflowLifeResponseLogger" class="com.javabatch.prototype.life.WorkflowLifeResponseLogger"/>
+
+
+    <!-- Batch Job Definition -->
+
+    <batch:job id="mailDepartmentLife">
+        <batch:step id="readWrite">
+            <batch:tasklet>
+                <batch:chunk
+                    reader="mailDepartmentLifeItemReader"
+                    processor="mailLifeProcessor"
+                    writer="mailLifeWriter"
+                    commit-interval="1">
+
+                 </batch:chunk>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <!-- Reader -->
+
+    <bean id="mailDepartmentLifeItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+        <property name="encoding" value="UTF-8"/>
+        <property name="resource" value="/com/javabatch/prototype/split/mails-life.csv" />
+
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="delimiter" value="," />
+                        <property name="names" value="senderName, senderMail, recipientMail, subject, body" />
+                    </bean>
+                </property>
+                <property name="fieldSetMapper">
+                   <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+                       <property name="prototypeBeanName" value="mail" />
+                   </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Processor -->
+
+    <bean id="mailLifeProcessor" class="com.javabatch.prototype.life.LifeProcessor"/>
+
+    <!-- Writer -->
+
+    <bean id="mailLifeWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
+        <property name="encoding" value="UTF-8"/>
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/departments/mails-life.csv" />
+        <property name="shouldDeleteIfExists" value="true"/>
+        <property name="appendAllowed" value="true" />
+        <property name="lineAggregator">
+            <bean class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
+                <property name="delimiter" value=", " />
+                <property name="fieldExtractor">
+                    <bean class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
+                        <property name="names" value="result, mail" />
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+</beans>
+

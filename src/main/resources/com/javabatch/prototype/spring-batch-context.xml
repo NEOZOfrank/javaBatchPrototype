@@ -18,7 +18,11 @@
 
     <!-- JOB 2 -->
 
-    <bean id="mail" class="com.javabatch.prototype.common.Mail"/>
+    <import resource="spring-batch-splitbydepartmentjob.xml"/>
+
+    <!-- JOB 3 A -->
+
+    <import resource="spring-batch-department-life.xml"/>
 
 
 </beans>

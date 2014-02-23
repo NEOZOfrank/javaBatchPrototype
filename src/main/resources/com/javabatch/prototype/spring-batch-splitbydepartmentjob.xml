@@ -28,7 +28,7 @@
     <!-- Reader -->
 
     <bean id="mailNoDuplicatesItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
-        <property name="resource" value="/com/javabatch/prototype/split/mails-noduplicates.csv" />
+        <property name="resource" value="/com/javabatch/prototype/noduplicates/mails-noduplicates.csv" />
         <property name="encoding" value="UTF-8"/>
 
         <property name="lineMapper">
@@ -50,7 +50,7 @@
 
     <!-- Writer -->
 
-    <bean id="mailDepartmentClassifier" class="com.javabatch.prototype.split.MailDepartmentClassifier"/>
+    <bean id="mailDepartmentClassifier" class="com.javabatch.prototype.noduplicates.MailDepartmentClassifier"/>
 
     <bean id="mailSplitClassifierWriter" class="org.springframework.batch.item.support.ClassifierCompositeItemWriter">
 
@@ -71,19 +71,19 @@
     </bean>
 
     <bean id="mailDepartmentLifeWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" parent="mailDepartmentAbstractWriter">
-        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/departments/mails-life.csv" />
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/split/mails-life.csv" />
     </bean>
 
     <bean id="mailDepartmentLegalWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" parent="mailDepartmentAbstractWriter">
-        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/departments/mails-legal.csv" />
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/split/mails-legal.csv" />
     </bean>
 
     <bean id="mailDepartmentFireWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" parent="mailDepartmentAbstractWriter">
-        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/departments/mails-fireMaterial.csv" />
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/split/mails-fireMaterial.csv" />
     </bean>
 
     <bean id="mailDepartmentUnknownWriter" class="org.springframework.batch.item.file.FlatFileItemWriter" parent="mailDepartmentAbstractWriter">
-        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/departments/mails-unknown.csv" />
+        <property name="resource"  value="file:src/main/resources/com/javabatch/prototype/split/mails-unknown.csv" />
 
     </bean>
 

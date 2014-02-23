@@ -1,5 +1,96 @@
-Frank Hinkel, frank.hinkel@innoq.com, max.mueller@mail.com, Subject1, Body-Text Text Text Text
-SenderB, sender@adress.com, max.mueller@mail.com, SubjectB, Body-Text BBBBBBBBB
-SenderA, sender@adress.com, max.mueller@mail.com, SubjectB, Body-Text AAA
-SenderC, senderc@adress.com, max.mueller@mail.com, SubjectB, Body-Text CCCCCCCCCCCCC
-SenderD, senderd@adress.com, max.mueller@mail.com, SubjectB, Body-Text DDDDDDDDDDDDD
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='Frank Hinkel', senderMail='frank.hinkel@innoq.com', recipientMail='max.mueller@mail.com', subject='Subject1', body='Body-Text Text Text Text'}
+true, Mail{senderName='SenderB', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text BBBBBBBBB'}
+true, Mail{senderName='SenderA', senderMail='sender@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text AAA'}
+true, Mail{senderName='SenderC', senderMail='senderc@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text CCCCCCCCCCCCC'}
+true, Mail{senderName='SenderD', senderMail='senderd@adress.com', recipientMail='max.mueller@mail.com', subject='SubjectB', body='Body-Text DDDDDDDDDDDDD'}
+true, Mail{senderName='SenderE13', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE14', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}
+true, Mail{senderName='SenderE1', senderMail='sendere@adress.com', recipientMail='dieter.immerda@mail.com', subject='SubjectB', body='Body-Text PPPPPPPP6'}

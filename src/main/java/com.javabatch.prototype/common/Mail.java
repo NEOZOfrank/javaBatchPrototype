@@ -1,5 +1,7 @@
 package com.javabatch.prototype.common;
 
+import java.io.Serializable;
+
 /**
  * User: Frank Hinkel
  */
